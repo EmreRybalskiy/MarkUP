@@ -1,0 +1,209 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* 1-е Задание */
+
+.box {
+  width: 600px;
+  background-color: #0d5825;
+}
+
+.box_quote {
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.author_quote {
+  font-style: oblique;
+}
+
+.box_cards {
+  height: 500px;
+  position: relative;
+}
+
+.card {
+  width: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: .5s ease;
+}
+
+.card:first-child {
+  transform: translate(-92%, -67%) rotate(-25deg);
+}
+
+.card:nth-child(2) {
+  transform: translate(-55%, -65%) rotate(-10deg);
+}
+
+.card:last-child {
+  transform: translate(-18%, -57%) rotate(6deg);
+}
+
+.card:hover {
+  top: 45%;
+}
+
+/* 2-е Задание */
+
+.cubes {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  
+}
+
+.cube {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}
+
+.red {
+  background-color: #ff0000;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+}
+
+.blue {
+  background-color:#0000ff;
+  top: 15%;
+  left: 8%;
+  z-index: 3;
+}
+
+.green {
+  background-color: #008000;
+  top: 31%;
+  left: 16%;
+  z-index: 2;
+}
+
+/* 3-е задание */
+
+.container {
+  position: relative;
+  background-color: #808080;
+  width: 50px;
+  height: 100vh;
+  cursor: pointer;
+  transition: 0.8s ease;
+}
+
+.container:hover {
+  width: 220px;
+  transition: 0.8s ease;
+}
+
+.container:hover .dropdown {
+  top: 2%;
+  left: 10%;
+  transition: 0.8s ease;
+}
+
+.container:hover .dropdown-name {
+  transition: 0.8s ease;
+  opacity: 0;
+}
+
+.dropdown {
+  top: 2%;
+  left: -200px;
+  display: block;
+  position: absolute;
+  transition: 0.8s ease;
+}
+
+.dropdown-name {
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transition: 1.5s ease;
+}
+
+.dropdown-menu li {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 20px 50px;
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s ease;
+}
+
+.dropdown-menu li:before {
+  content: "";
+  position: absolute;
+  width: 15px; 
+  height: 15px;
+  left: 20px;
+  background: #ffa500;
+  transform: rotate(-45deg);
+  border: 2px solid #000000;
+}
+
+.dropdown-menu li a:hover {
+  transition: 0.5s ease;
+  color: #f88d00;
+}
+
+/* 4е Задание */
+
+.anim-box {
+  width: 300px;
+  height: 300px;
+  position: relative
+}
+
+.animated-block {
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #ff0000;
+  animation: animbox 4s infinite ease;
+}
+
+@keyframes animbox {
+  0% {
+    transform: translate(0,0);
+    background-color: #ff0000;
+  }
+  25% {
+    transform: translate(0, 200px);
+    background-color: #0000ff;
+  }
+  50% {
+    transform: translate(200px, 200px);
+    background-color: #008000;
+  }
+  75% {
+    transform: translate(200px, 0);
+    background-color: #ffff00;
+  }
+  100% {
+    transform: translate(0, 0);
+    background-color: #ff0000;
+  }
+}
+
+
